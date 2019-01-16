@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -10,62 +10,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<div class="weather-box">
-    <div class="container">
-
-    <div class="jumbotron">
+<body>    
       <h1>Mars</h1>
       <p>
         <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars Data</a>
       </p>
 
-      <div class="sigline">
-        <p>
-         
-        </p>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
           <h2>This is the latest Mars news.</h2>
           <h4>{{mars.article}}</h4>
           <h4> {{ mars.title }}</h4>
           <p> {{mars.news_p}} </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8 big_box">
           <h2>Featured Image from JPL.</h2>
           <img src="{{mars.featured_image_url}}" alt="Mars featured image" />
-        </div>
 
-        <div class="col-md-4">
-          <div class="row weather-box">
-            <div class="col-md-12">
               <h3>Current weather on Mars</h3>
               <p>
                 {{mars.mars_weather}}
               </p>
-            </div>
-          </div>
 
-          <div class="col-md-12">
             <h3>Mars facts</h3>
-            {{mars.html_table | safe }}
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</div>
+           <h1> {{mars.df}}</h1>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

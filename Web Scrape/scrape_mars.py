@@ -13,7 +13,7 @@ browser.visit(url)
 html = browser.html
 soup = bs(html, 'html.parser')
 article = soup.find("div", class_="list_text")
-# news_p = article.find("div", class_="article_teaser_body").text
+news_p = article.find("div", class_="article_teaser_body").text
 news_title = article.find("div", class_="content_title").text
 news_date = article.find("div", class_="list_date").text
 # print(news_date)
@@ -52,5 +52,5 @@ tables = pd.read_html(url)
 df = tables[0]
 # df.head()
 
-html_table = df.to_html()
-html_table.replace('\n', '')
+# html_table = df.to_html()
+# html_table.replace('\n', '')
