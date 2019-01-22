@@ -52,7 +52,7 @@ district_summary["Total Students"] = district_summary["Total Students"].map("{:,
 district_summary["Total Budget"] = district_summary["Total Budget"].map("${:,.2f}".format)
 
 # Display the data frame
-district_summary
+print(district_summary)
 
 # Determine the School Type
 school_types = school_data.set_index(["school_name"])["type"]
@@ -97,7 +97,7 @@ per_school_summary["Total School Budget"] = per_school_summary["Total School Bud
 per_school_summary["Per Student Budget"] = per_school_summary["Per Student Budget"].map("${:,.2f}".format)
 
 # Display the data frame
-per_school_summary
+print(per_school_summary)
 
 # Sort and show top five schools
 top_schools = per_school_summary.sort_values(["% Overall Passing Rate"], ascending=False)
@@ -128,7 +128,7 @@ scores_by_grade = scores_by_grade[["9th", "10th", "11th", "12th"]]
 scores_by_grade.index.name = None
 
 # Display the data frame
-scores_by_grade
+print(scores_by_grade)
 
 # Create data series of scores by grade levels using conditionals
 ninth_graders = school_data_complete[(school_data_complete["grade"] == "9th")]
@@ -151,7 +151,7 @@ scores_by_grade = scores_by_grade[["9th", "10th", "11th", "12th"]]
 scores_by_grade.index.name = None
 
 # Display the data frame
-scores_by_grade
+print(scores_by_grade)
 
 # Establish the bins 
 spending_bins = [0, 585, 615, 645, 675]
@@ -180,7 +180,7 @@ spending_summary = spending_summary[["Average Math Score",
                                      "% Overall Passing Rate"]]
 
 # Display results
-spending_summary
+print(spending_summary)
 
 # Establish the bins 
 size_bins = [0, 1000, 2000, 5000]
@@ -210,7 +210,7 @@ size_summary = size_summary[["Average Math Score",
                              "% Overall Passing Rate"]]
 
 # Display results
-size_summary
+print(size_summary)
 
 # Type | Average Math Score | Average Reading Score | % Passing Math | % Passing Reading | % Overall Passing Rate
 
@@ -235,4 +235,4 @@ type_summary = type_summary[["Average Math Score",
                              "% Overall Passing Rate"]]
 
 # Display results
-type_summary
+print(type_summary)
