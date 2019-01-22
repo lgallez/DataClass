@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-"""PyBank Homework Solution."""
-
 # Dependencies
 import csv
 import os
@@ -14,7 +11,7 @@ total_months = 0
 month_of_change = []
 net_change_list = []
 greatest_increase = ["", 0]
-greatest_decrease = ["", 9999999999999999999]
+greatest_decrease = ["", 999999999]
 total_net = 0
 
 # Read the csv and convert it into a list of dictionaries
