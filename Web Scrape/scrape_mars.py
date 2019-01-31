@@ -13,9 +13,9 @@ browser.visit(url)
 html = browser.html
 soup = bs(html, 'html.parser')
 article = soup.find("div", class_="list_text")
-news_p = article.find("div", class_="article_teaser_body").text
-news_title = article.find("div", class_="content_title").text
-news_date = article.find("div", class_="list_date").text
+news_p = soup.article("div", class_="article_teaser_body").text
+news_title = soup.find("div", class_="content_title").text
+news_date = soup.find("div", class_="list_date").text
 # print(news_date)
 # print(news_title)
 # print(news_p)
