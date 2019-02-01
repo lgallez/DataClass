@@ -39,7 +39,7 @@ button.on("click", function() {
 
   console.log(filteredData)
 
-  list = filteredData.lenght 
+  list = filteredData.length
 
   console.log(list)
 
