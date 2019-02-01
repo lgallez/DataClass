@@ -53,3 +53,14 @@ button.on("click", function() {
   }
 
 });
+
+// function to unfilter table when user changes input form text
+
+date_input.on("changes", function() {
+
+    // unfilter table back to original data state
+    table_build(tableData);
+
+    // set placeholder value back in form
+
+});
